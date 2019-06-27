@@ -60,7 +60,7 @@ document.body.appendChild(middleEarthSection);
 
   // 3. append the section to the body of the DOM.
 
-
+}
 
 
 
@@ -74,6 +74,17 @@ document.body.appendChild(middleEarthSection);
 
 function makeHobbits() {
   console.log("2: makeHobbits");
+
+  const shireHobbits = document.createElement("ul");
+
+  for (let i = 0; i < hobbits.length; i++){
+    const li = document.createElement("li");
+    li.setAttribute("class", "hobbit");
+    li.innerHTML = hobbits[i];
+    shireHobbits.appendChild(li);
+  }
+  
+document.querySelector("#The-Shire").appendChild(shireHobbits);
 
   // display an `unordered list` of hobbits in the shire
 
