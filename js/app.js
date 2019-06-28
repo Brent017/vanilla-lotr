@@ -174,7 +174,8 @@ document.querySelector("#Rivendell").appendChild(aside)
 
 function leaveTheShire() { 
   console.log("6: leaveTheShire");
-
+const moveHobbits = document.querySelector("ul")
+document.querySelector("#Rivendell").appendChild(moveHobbits)
   // assemble the `hobbits` and move them to `rivendell`
 }
 
