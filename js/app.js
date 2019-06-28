@@ -80,7 +80,7 @@ function makeHobbits() {
   for (let i = 0; i < hobbits.length; i++){
     const li = document.createElement("li");
     li.setAttribute("class", "hobbit");
-    li.innerHTML = hobbits[i];
+    li.innerText = hobbits[i];
     shireHobbits.appendChild(li);
   }
   
@@ -128,11 +128,16 @@ function makeBaddies() {
   console.log("4: makeBaddies");
 
   // display an unordered list of baddies in Mordor
-
+const mordorBaddies = document.createElement("ul");
   // give each of the baddies a class of "baddy"
-
+for (let i = 0; i < baddies.length; i++) {
+  const li = document.createElement("li");
+  li.setAttribute("class", "baddy");
+  li.innerText = baddies[i];
+  mordorBaddies.appendChild(li);
   // remember to append them to Mordor
-
+}
+document.querySelector("#Mordor").appendChild(mordorBaddies);
 }
 
 // COMMIT YOUR WORK
