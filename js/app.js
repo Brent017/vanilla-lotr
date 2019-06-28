@@ -242,11 +242,11 @@ hobbitFriends.appendChild(document.querySelector(".hobbit"));
 function theBalrog() { 
   console.log("9: theBalrog");
    // // change the `'Gandalf'` text to `'Gandalf the White'`
-   // let gandalf = document.querySelector("");
-   // gandalf = "Gandalf the White";
+   let gandalf = document.querySelector("li");
+   gandalf.innerText = "Gandalf the White";
    // apply the following style to the element, make the // background 'white', add a grey border
-   // document.querySelector("").style.border = "thick solid grey";
-   // document.querySelector("").style.backgroundColor = "grey";
+   document.querySelector("li").style.border = "thick solid grey";
+   document.querySelector("li").style.backgroundColor = "white";
 }
 
 // COMMIT YOUR WORK
