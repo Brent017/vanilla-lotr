@@ -152,16 +152,19 @@ function makeBuddies () {
   console.log("5: makeBuddies");
 
   // create an `aside` tag
-   const aside = document.createElement("aside");
+  const aside = document.createElement("aside");
   // put an `unordered list` of the `'buddies'` in the aside
+  const ul = document.createElement("ul");
+
    for (let i = 0; i < buddies.length; i++){
     const li = document.createElement("li");
     li.setAttribute("class", "buddies");
     li.innerText = buddies[i];
-    aside.appendChild(li);
+    ul.appendChild(li);
    }
   // insert your aside as a child element of `rivendell`
 document.querySelector("#Rivendell").appendChild(aside)
+document.querySelector("aside").appendChild(ul)
 }
 
 // COMMIT YOUR WORK
@@ -175,7 +178,8 @@ document.querySelector("#Rivendell").appendChild(aside)
 function leaveTheShire() { 
   console.log("6: leaveTheShire");
 const moveHobbits = document.querySelector("ul")
-document.querySelector("#Rivendell").appendChild(moveHobbits)
+
+document.querySelector("aside").appendChild(moveHobbits)
   // assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -205,10 +209,25 @@ strider.innerText = "Aragorn"
 
 function forgeTheFellowShip() { 
   console.log("8: forgeTheFellowShip");
-  // create a new div called `'the-fellowship'` within `rivendell`
-  // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+//   // create a new div called `'the-fellowship'` within `rivendell`
+const div = document.createElement("div");
+div.setAttribute("id", "the-fellowship");
+document.querySelector("#Rivendell").appendChild(div);
+//   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+const hobbitFriends = document.querySelector("ul");
+// const buddyFriends = document.querySelector("aside");
+// document.querySelector("#the-fellowship").appendChild(hobbitFriends);
+div.appendChild(hobbitFriends);
+
+
+for (let i = 0; i < 5; i++) {
+alert(document.querySelector(".buddies").innerText + "has joined your party.");
+hobbitFriends.appendChild(document.querySelector(".buddies"));
+alert(document.querySelector(".hobbit").innerText + "has joined your party.");
+hobbitFriends.appendChild(document.querySelector(".hobbit"));
+}
   // after each character is added make an alert that they // have joined your party
-  
+ 
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -222,8 +241,12 @@ function forgeTheFellowShip() {
 
 function theBalrog() { 
   console.log("9: theBalrog");
-   // change the `'Gandalf'` text to `'Gandalf the White'`
+   // // change the `'Gandalf'` text to `'Gandalf the White'`
+   // let gandalf = document.querySelector("");
+   // gandalf = "Gandalf the White";
    // apply the following style to the element, make the // background 'white', add a grey border
+   // document.querySelector("").style.border = "thick solid grey";
+   // document.querySelector("").style.backgroundColor = "grey";
 }
 
 // COMMIT YOUR WORK
