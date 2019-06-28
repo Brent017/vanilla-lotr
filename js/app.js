@@ -190,7 +190,9 @@ document.querySelector("#Rivendell").appendChild(moveHobbits)
 function beautifulStranger() { 
   console.log("7: beautifulStranger");
 
-  // change the `'Strider'` text to `'Aragorn'`
+const findName = document.querySelector(".buddies");
+let strider = findName.nextSibling.nextSibling.nextSibling;
+strider.innerText = "Aragorn"
 }
 
 // COMMIT YOUR WORK
