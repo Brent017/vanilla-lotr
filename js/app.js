@@ -221,9 +221,9 @@ div.appendChild(hobbitFriends);
 
 
 for (let i = 0; i < 5; i++) {
-alert(document.querySelector(".buddies").innerText + "has joined your party.");
+alert(document.querySelector(".buddies").innerText + " has joined your party.");
 hobbitFriends.appendChild(document.querySelector(".buddies"));
-alert(document.querySelector(".hobbit").innerText + "has joined your party.");
+alert(document.querySelector(".hobbit").innerText + " has joined your party.");
 hobbitFriends.appendChild(document.querySelector(".hobbit"));
 }
   // after each character is added make an alert that they // have joined your party
@@ -280,10 +280,10 @@ function itsDangerousToGoAlone() {
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
   const frodo = document.querySelector("ul li:nth-child(8)");
   const sam = document.querySelector("ul li:nth-child(3)");
-  const ul = document.createElement("ul");
-  document.querySelector("#Mordor").appendChild(ul);
-  ul.appendChild(sam);
-  ul.appendChild(frodo);
+  const ol = document.createElement("ol");
+  document.querySelector("#Mordor").appendChild(ol);
+  ol.appendChild(sam);
+  ol.appendChild(frodo);
   // add a div with an id of `'mount-doom'` to `Mordor`
   const div = document.createElement("div");
   div.setAttribute("id", "mount-doom");
@@ -323,7 +323,18 @@ function weWantsIt() {
 function thereAndBackAgain() { 
   console.log("13: thereAndBackAgain");
   // remove `Gollum` and `the Ring` from the document
+  document.querySelector("#gollum").remove();
   // Move all the `hobbits` back to `the shire`
+  const ul = document.createElement("ul");
+  document.querySelector("article").appendChild(ul);
+  const merry = document.querySelector("ul li:nth-child(4)");
+  const pippin = document.querySelector("ul li:nth-child(6)");
+  ul.appendChild(merry);
+  ul.appendChild(pippin);
+  const sam = document.querySelector("#Mordor ol li");
+  const frodo = document.querySelector("ol li:last-of-type")
+  ul.appendChild(sam);
+  ul.appendChild(frodo);
 }
 
 // COMMIT YOUR WORK
